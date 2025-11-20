@@ -9,7 +9,7 @@
         .header { background-color: #cc0000; color: white; padding: 20px; text-align: center; border-bottom: 5px solid #000; }
         .header h1 { margin: 0; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; }
         .header p { margin: 5px 0 0; font-weight: bold; font-size: 14px; }
-        .container { padding: 15px; max-width: 600px; margin: 0 auto; }
+        .container { padding: 15px; max-width: 800px; margin: 0 auto; }
         .card { background: white; border-left: 5px solid #333; margin-bottom: 15px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .card.danger { border-left-color: #cc0000; background-color: #fff0f0; }
         .card.warning { border-left-color: #ff9900; }
@@ -20,12 +20,12 @@
         .footer { text-align: center; padding: 20px; font-size: 12px; color: #777; border-top: 1px solid #ddd; margin-top: 20px; }
         .blink { animation: blinker 1.5s linear infinite; color: red; font-weight: bold; }
         
-        /* Link Styling */
-        a { text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul { list-style-type: none; padding: 0; margin: 0; }
-        li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
-        li:last-child { border-bottom: none; }
+        /* PDF Viewer Styles */
+        .pdf-wrapper { margin-top: 15px; border: 1px solid #ccc; background: #eee; }
+        iframe { width: 100%; height: 400px; border: none; display: block; }
+        .download-btn { display: inline-block; padding: 5px 10px; background: #333; color: white; text-decoration: none; font-size: 12px; border-radius: 3px; margin-bottom: 5px; }
+        .download-btn:hover { background: #555; }
+        .doc-header { margin-top: 20px; border-top: 1px dashed #ccc; padding-top: 10px; }
 
         @keyframes blinker { 50% { opacity: 0; } }
     </style>
@@ -42,26 +42,45 @@
 
     <div class="card warning">
         <span class="label">OFFICIAL EXHIBITS & PROOF</span>
-        <div class="item-title">Download Evidence of Fraud</div>
+        <div class="item-title">Review The Evidence</div>
         <div class="details">
-            <p>Review the forensic documents forcing this cancellation:</p>
-            <ul>
-                <li>
-                    <a href="Auctioneer_Resignation.pdf" target="_blank" style="color: #cc0000; font-weight: bold;">📄 READ: Auctioneer Resignation Email</a><br>
-                    <span style="font-size: 11px;">(Alex Cooper Auctioneers withdraws due to fraud liability)</span>
-                </li>
-                <li>
-                    <a href="Forensic_Report.pdf" target="_blank" style="color: #cc0000; font-weight: bold;">📄 READ: Forensic Forgery Report</a><br>
-                    <span style="font-size: 11px;">(Proof of "Aspose" fabrication & spliced signature)</span>
-                </li>
-                <li>
-                    <a href="FBI_IC3_Filing.pdf" target="_blank" style="color: #cc0000; font-weight: bold;">📄 READ: FBI Wire Fraud Filing</a><br>
-                    <span style="font-size: 11px;">(Submission ID: 2cda8bea1d984c9ebafebb483ca10f2d)</span>
-                </li>
-                <li>
-                    <a href="Buyer_Beware_Flyer.pdf" target="_blank" style="color: #333; font-weight: bold;">📄 DOWNLOAD: The Legal Notice Flyer</a>
-                </li>
-            </ul>
+            <p>The following documents are filed with the Court and Federal Agencies. Scroll to view.</p>
+            
+            <div class="doc-header">
+                <strong>1. Auctioneer Resignation</strong><br>
+                <span style="font-size: 11px; color: #cc0000;">(Alex Cooper withdraws due to fraud)</span><br>
+                <a href="Auctioneer_Resignation.pdf" class="download-btn" target="_blank">Download PDF</a>
+            </div>
+            <div class="pdf-wrapper">
+                <iframe src="Auctioneer_Resignation.pdf"></iframe>
+            </div>
+
+            <div class="doc-header">
+                <strong>2. Forensic Forgery Report</strong><br>
+                <span style="font-size: 11px; color: #cc0000;">("Aspose" Fabrication & Spliced Signature)</span><br>
+                <a href="Forensic_Report.pdf" class="download-btn" target="_blank">Download PDF</a>
+            </div>
+            <div class="pdf-wrapper">
+                <iframe src="Forensic_Report.pdf"></iframe>
+            </div>
+
+            <div class="doc-header">
+                <strong>3. FBI Wire Fraud Filing</strong><br>
+                <span style="font-size: 11px; color: #cc0000;">(Submission ID: 2cda8bea1d984c9ebafebb483ca10f2d)</span><br>
+                <a href="FBI_IC3_Filing.pdf" class="download-btn" target="_blank">Download PDF</a>
+            </div>
+            <div class="pdf-wrapper">
+                <iframe src="FBI_IC3_Filing.pdf"></iframe>
+            </div>
+
+             <div class="doc-header">
+                <strong>4. "Buyer Beware" Legal Notice</strong><br>
+                <a href="Buyer_Beware_Flyer.pdf" class="download-btn" target="_blank">Download PDF</a>
+            </div>
+            <div class="pdf-wrapper">
+                <iframe src="Buyer_Beware_Flyer.pdf"></iframe>
+            </div>
+
         </div>
     </div>
 
@@ -88,3 +107,31 @@
     </div>
 
     <div class="card danger">
+        <span class="label">EVIDENCE OF FRAUD</span>
+        <span class="status">FORENSIC PROOF</span>
+        <div class="item-title">Digital Forgery of Note</div>
+        <div class="details">
+            <strong>Evidence:</strong> "Aspose" Metadata & "Form XObject" Splice.<br>
+            <strong>Chain of Custody:</strong> Trustees admitted in Interrogatories (8/28/25) that the Note was in California, yet claimed to scan it in Maryland on 8/26/24. Physically impossible.
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="label">LATE DOCKET ENTRY</span>
+        <div class="item-title">Judicial Notation: Payment History</div>
+        <div class="details">
+            <strong>Entered:</strong> Nov 19, 2025 (Yesterday)<br>
+            <strong>Analysis:</strong> Plaintiff filed 100 pages of history from 2010-2014 but omitted 2022 records to conceal the HUD Partial Claim.
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>NOTICE TO POTENTIAL BIDDERS:</strong><br>
+        Any purchase of this property is subject to the outcome of the Interlocutory Appeal filed 11/19/2025. Title is uninsurable.</p>
+        <p><em>Data sourced from Official Circuit Court Docket.</em></p>
+    </div>
+
+</div>
+
+</body>
+</html>
